@@ -1,0 +1,38 @@
+import java.util.*;
+
+public class test
+{
+
+	public static void main(String args[])
+	{
+		int array[] = {4,-3,5,-2,-1,2,6,-2};
+		int localmin=0;
+		int localmax=0;
+		int min=0,max=0;
+		for(int i = 0 ; i < array.length ;i++)
+		{
+			localmax+=array[i];
+			if(localmax > max)
+				max=localmax;
+			else if(localmax<0)
+				localmax=0;
+			
+		}
+		min=max;
+		for(int i = 0 ; i<array.length ;i++)
+		{
+			localmin+=array[i];
+			if(localmin<min && localmin>0)
+			{
+				min=localmin;
+			}
+			else if (localmin<0)
+				localmin=0;
+				
+		}
+		System.out.println(min);
+
+	}
+	
+	
+}
